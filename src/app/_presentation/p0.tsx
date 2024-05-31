@@ -29,7 +29,7 @@ export const Presentation0 = () => {
             theme="monokai"
             name="jsEditor"
             width='100%'
-            height='200px'
+            height='500px'
             style={{marginBottom: '44px', marginTop: '5px'}}
             wrapEnabled={true}
             // onLoad={this.onLoad}
