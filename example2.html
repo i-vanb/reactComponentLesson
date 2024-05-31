@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Picker</title>
+</head>
+<body>
+<div>
+    <h1>Pick a color </h1>
+
+    <div class="flex">
+        <div class="text-center">
+            <div class="color__pick"></div>
+            <button>Red</button>
+        </div>
+        <div class="text-center">
+            <div class="color__pick"></div>
+            <button>Yellow</button>
+        </div>
+        <div class="text-center">
+            <div class="color__pick"></div>
+            <button>Green</button>
+        </div>
+    </div>
+
+</div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const color = button.previousElementSibling;
+            const isColor = !!color.style.backgroundColor;
+            color.style.backgroundColor = isColor
+                ? color.style.backgroundColor = ''
+                : button.textContent.toLowerCase();
+        });
+    });
+</script>
+<style>
+    body{
+        text-align: center;
+    }
+    .color__pick{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid #000;
+        margin: 12px auto;
+    }
+    .flex{
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+</style>
+</html>
